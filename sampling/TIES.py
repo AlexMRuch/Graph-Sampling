@@ -16,13 +16,13 @@ class TIES():
         Vs = []																			
         #Empty list Vs														
         phi = round((phi * 0.01), 2)
-        print "here1"
+        print("here1")
         while (len(Vs)) <= math.floor(phi * len(V)):									
         #Loops run till sample size * length of V where V is number of nodes in graph as calculated above.
             edges_sample = random.sample(G.edges(), 1)									
             #Randomly samples one edge from a graph at a time
-            print "here2"
-            print "edges sampled", edges_sample
+            print("here2")
+            print("edges sampled", edges_sample)
             for a1, a2 in edges_sample:													
             #Nodes corresponding to sample edge are retrieved and added in Graph G1
                 self.G1.add_edge(a1, a2)
