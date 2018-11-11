@@ -3,11 +3,10 @@ import networkx as nx
 from graph_tool.all import *
 from time import time
 
-# read facebook network edge list "fb.txt" and return a graph g. 
-# g = nx.read_edgelist("fb.txt", create_using= nx.Graph(),nodetype=int)
-
 # make random graph: graph-tool.skewed.de/static/doc/generation.html#graph_tool.generation.price_network
-g = graph_tool.generation.price_network(100000, directed=False)
+g_gt = graph_tool.generation.price_network(100000, directed=False)
+g_gt.save("test.graphml")
+g_nx = nx.read_edgelist("test.graphml", create_using= nx.Graph(),nodetype=int)
 
 # make an object and call function SRW
 object1 = sampling.SRW_RWF_ISRW()
