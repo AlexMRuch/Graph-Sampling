@@ -1,32 +1,34 @@
 import sampling 
 import networkx as nx
+from graph_tool.all import * as gt
+from time import time
 
 # read facebook network edge list "fb.txt" and return a graph g. 
 # g = nx.read_edgelist("fb.txt", create_using= nx.Graph(),nodetype=int)
 
 # make random graph: graph-tool.skewed.de/static/doc/generation.html#graph_tool.generation.price_network
-g = graph_tool.generation.price_network(100000, directed=False)
+g = gt.generation.price_network(100000, directed=False)
 
 # make an object and call function SRW
-object1=sampling.SRW_RWF_ISRW()
+object1 = sampling.SRW_RWF_ISRW()
 sample1 = object1.random_walk_sampling_simple(g,100) # graph, number of nodes to sample
 print("Number of nodes sampled=",len(sample1.nodes()))
 print("Number of edges sampled=",len(sample1.edges()))
 
 # make an object and call function RWF
-object2=sampling.SRW_RWF_ISRW()
-sample2= object2.random_walk_sampling_with_fly_back(g,110,0.2)  # graph, number of nodes to sample, fly-back probability
+object2 = sampling.SRW_RWF_ISRW()
+sample2 = object2.random_walk_sampling_with_fly_back(g,110,0.2)  # graph, number of nodes to sample, fly-back probability
 print("Number of nodes sampled=",len(sample2.nodes()))
 print("Number of edges sampled=",len(sample2.edges()))
 
 # make an object and call function ISRW
-object3=Sampling.SRW_RWF_ISRW()
-sample3= object3.random_walk_induced_graph_sampling(g,120)  # graph, number of nodes to sample
+object3 = Sampling.SRW_RWF_ISRW()
+sample3 = object3.random_walk_induced_graph_sampling(g,120)  # graph, number of nodes to sample
 print "Number of nodes sampled=",len(sample3.nodes())
 print("Number of edges sampled=",len(sample3.edges()))
 
 # make an object and call function SB
-object3=sampling.Snowball()
+object3 = sampling.Snowball()
 sample3 = object3.snowball(g,28000,25) # graph, number of nodes to sample , k set
 print("Number of nodes sampled=",len(sample3.nodes()))
 print("Number of edges sampled=",len(sample3.edges()))
