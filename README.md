@@ -1,3 +1,10 @@
+# TODOs:
+* FastForestFire.py:
+    * Copy ForestFire.py
+    * [Implement vertex and edge search in graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html#fast-iteration-over-vertices-and-edges)
+    * [Implement faster random selection](https://gist.github.com/AlexMRuch/d2e4fc61cf93a6971dc62bb5e59fd43c)
+    * [Check here for an example of graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html#an-example-building-a-price-network)
+
 # Graph Sampling Package
 
 [Social Network Analysis](https://en.wikipedia.org/wiki/Social_network_analysis) (SNA) has recently been gaining more and more popularity in various domains. Unfortunately, performing SNA is not always an easy task, due to the volume of data which translates to huge network/graph, it is very time consuming and [computationally expensive](https://en.wikipedia.org/wiki/Computational_complexity) to perform analysis on these graphs. Depending on the type of task, handling graphs with even just dozens of thousands of nodes can be unfeasible, as some studies show. An intuitive solution to deal with this situation, just as in any scenario where we have a massive amount of data, is to sample the graph and then perform relevant simulation/analysis on obtained [sub-graph](https://en.wikipedia.org/wiki/Subgraph).
