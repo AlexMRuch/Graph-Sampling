@@ -6,8 +6,8 @@ import timeit  #run with timeit.timer().timeit(number=5)
 # make random graph: graph-tool.skewed.de/static/doc/generation.html#graph_tool.generation.price_network
 print('Making random graph for graph-tool and networkx...')
 g_gt = graph_tool.generation.price_network(100000, directed=False)
-g_gt.save("test.graphml")
-g_nx = nx.read_edgelist("test.graphml", create_using= nx.Graph(),nodetype=int)
+g_gt.save("/test/test.graphml")
+g_nx = nx.read_edgelist("/test/test.graphml", create_using= nx.Graph(),nodetype=int)
 print('  Graph made and loaded into both libraries')
 
 # make an object and call function SRW
