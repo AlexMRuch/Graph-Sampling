@@ -1,6 +1,5 @@
 # TODOs:
 * FastForestFire.py:
-    * Copy ForestFire.py
     * [Implement vertex and edge search in graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html#fast-iteration-over-vertices-and-edges)
     * [Implement faster random selection](https://gist.github.com/AlexMRuch/d2e4fc61cf93a6971dc62bb5e59fd43c)
     * [Check here for an example of graph-tool](https://graph-tool.skewed.de/static/doc/quickstart.html#an-example-building-a-price-network)
